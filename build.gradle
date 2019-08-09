@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+//defaultTasks 'clean', 'deployToTomcat'
+defaultTasks 'clean', 'war'
+
+//task deployTomcat (type: Copy, dependsOn: 'war'){
+//	from 'build/libs/Rest.war'
+//	into '../Apache Tomcat/webapps'
+//}
+
+task deployTomcat (type: Copy){
+	from 'build/libs/Rest.war'
+	into '../Apache Tomcat/webapps'
+}
