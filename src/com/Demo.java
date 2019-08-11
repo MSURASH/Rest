@@ -122,7 +122,7 @@ public class Demo {
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public String insert(Data data) throws ClassNotFoundException, SQLException {
 		
-		System.out.println(data);
+		//System.out.println(data);
 		
 		Connection con = connect();
 		Statement st = con.createStatement();
