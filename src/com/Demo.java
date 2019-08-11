@@ -123,7 +123,8 @@ public class Demo {
 	public String insert(Data data) throws ClassNotFoundException, SQLException {
 		
 		//System.out.println(data);
-		
+		System.out.println("check");
+
 		Connection con = connect();
 		Statement st = con.createStatement();
 		String sql = "select MAX(id) as id from team"; 
