@@ -135,10 +135,13 @@ public class Demo {
 			 maxID = rs.getInt("id");
 		 } 
 		int ID = maxID + 1;
+		System.out.println(ID);
         String sql2 = "insert into team(id, teams, city) "
         + "values('" +ID+ "', '" +data.getTeam().toUpperCase()+ "', '" +data.getCity().toUpperCase()+ "')"; 
         int rows = st.executeUpdate(sql2); 
         if (rows > 0) {
+    		System.out.println(rows);
+
             con.close(); 
     		return "Insert Successful";
         }             
@@ -305,7 +308,7 @@ public class Demo {
 	
 	private Connection connect() throws SQLException, ClassNotFoundException {
 		
-		String url = "jdbc:oracle:thin:@localhost:1521/orcl.rev.global.pvt";
+		String url = "jdbc:oracle:thin:@localhost:1521/E1LOCAL";
 		String user = "JDE";
 		String password = "jde";
 		Class.forName("oracle.jdbc.OracleDriver");
